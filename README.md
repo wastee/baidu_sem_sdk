@@ -1,9 +1,9 @@
-# 只在Python3下工作/Only work in Python3
+> 只在Python3下工作/Only work in Python3
 ----------------------------------------------
 # Baidu SEM SDK
 This is a Python3 SDK for Baidu SEM.
 Original SDK is write by Python2. And it is out of date.
-I changed it to make it run perfect in Python3, but no Python2.
+I changed it to make it runs perfectly in Python3, but not in Python2.
 I also delete some outdated API, and add a few new API.
 
 I saved a few dictionary to json files in utils foler which i used to use.
@@ -22,8 +22,10 @@ Baidu SEM API doc: https://cloud.baidu.com/doc/SEM/guanliAPI.html
 
 Baidu SEM API 文档: https://cloud.baidu.com/doc/SEM/guanliAPI.html
 
-
 --------------------------
+
+# 使用说明/Instructions
+
 使用前/Before use SDK：
 ```
 pip install requests
