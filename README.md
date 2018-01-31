@@ -7,7 +7,7 @@ Original SDK is writen by Python2. And it is out of date.
 
 I changed it and make it runs perfectly in Python3, but not in Python2.
 
-I also delete outdated APIs, and add a few new API是.
+I also delete outdated APIs, and add a few new APIs.
 
 I saved a few dictionarys into json files in utils foler which i used to use.
 
