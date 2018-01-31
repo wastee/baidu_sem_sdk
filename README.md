@@ -33,6 +33,8 @@ or
 pip install -r requirements.txt
 ```
 
+填上api.properties中账户的信息/Add your account information in api.properties
+
 代码示例/Reference code：
 ```python
 from sms_service_AccountService import *
