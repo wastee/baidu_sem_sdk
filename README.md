@@ -22,8 +22,16 @@ Baidu SEM API 文档: https://cloud.baidu.com/doc/SEM/guanliAPI.html
 
 
 --------------------------
+使用前/Before use SDK：
+```
+pip install requests
 
-代码示例/reference code：
+or
+
+pip install -r requirements.txt
+```
+
+代码示例/Reference code：
 ```python
 from sms_service_AccountService import *
 service = sms_service_AccountService()
@@ -40,3 +48,5 @@ account_info_body = {
 }
 print(getAccountInfo(account_info_body)
 ```
+
+# 只在Python3下工作/Only work in Python3
