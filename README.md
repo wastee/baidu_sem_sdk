@@ -27,7 +27,8 @@ Baidu SEM API 文档: https://cloud.baidu.com/doc/SEM/guanliAPI.html
 # 使用说明/Instructions
 
 使用前/Before use SDK：
-```
+
+```bash
 pip install requests
 
 or
