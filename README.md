@@ -1,3 +1,5 @@
+# 只在Python3下工作/Only work in Python3
+----------------------------------------------
 # Baidu SEM SDK
 This is a Python3 SDK for Baidu SEM.
 Original SDK is write by Python2. And it is out of date.
@@ -48,5 +50,3 @@ account_info_body = {
 }
 print(getAccountInfo(account_info_body)
 ```
-
-# 只在Python3下工作/Only work in Python3
