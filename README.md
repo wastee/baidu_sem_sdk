@@ -23,18 +23,20 @@ Baidu SEM API 文档: https://cloud.baidu.com/doc/SEM/guanliAPI.html
 
 --------------------------
 
-代码示例：
-    from sms_service_AccountService import *
-    service = sms_service_AccountService()
-    account_info_body = {
-        'accountFields': [
-            'balance',  # 账户余额
-            'budgetType',  # 预算类型
-            'budget',  # 账户预算
-            'cost',  # 账户累积消费
-            'regDomain',  # 账户注册域名
-            'regionTarget',  # 推广地域列表
-            'userStat',  # 账户状态
-        ]
-    }
-    print(getAccountInfo(account_info_body)
+代码示例/reference code：
+```python
+from sms_service_AccountService import *
+service = sms_service_AccountService()
+account_info_body = {
+    'accountFields': [
+        'balance',  # 账户余额
+        'budgetType',  # 预算类型
+        'budget',  # 账户预算
+        'cost',  # 账户累积消费
+        'regDomain',  # 账户注册域名
+        'regionTarget',  # 推广地域列表
+        'userStat',  # 账户状态
+    ]
+}
+print(getAccountInfo(account_info_body)
+```
