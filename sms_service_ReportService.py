@@ -1,19 +1,22 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_ReportService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'ReportService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'ReportService',
+                                  token)
 
     def getRealTimeQueryData(self, getRealTimeQueryDataRequest=None):
-        return self.execute('getRealTimeQueryData', getRealTimeQueryDataRequest)
+        return self.execute('getRealTimeQueryData',
+                            getRealTimeQueryDataRequest)
 
     def getRealTimePairData(self, getRealTimePairDataRequest=None):
         return self.execute('getRealTimePairData', getRealTimePairDataRequest)
 
     def getProfessionalReportId(self, getProfessionalReportIdRequest=None):
-        return self.execute('getProfessionalReportId', getProfessionalReportIdRequest)
+        return self.execute('getProfessionalReportId',
+                            getProfessionalReportIdRequest)
 
     def getReportState(self, getReportStateRequest=None):
         return self.execute('getReportState', getReportStateRequest)

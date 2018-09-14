@@ -1,13 +1,14 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_KRService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'KRService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'KRService', token)
 
     def getEstimatedDataByBid(self, getEstimatedDataByBidRequest=None):
-        return self.execute('getEstimatedDataByBid', getEstimatedDataByBidRequest)
+        return self.execute('getEstimatedDataByBid',
+                            getEstimatedDataByBidRequest)
 
     def getEstimatedData(self, getEstimatedDataRequest=None):
         return self.execute('getEstimatedData', getEstimatedDataRequest)
@@ -26,3 +27,6 @@ class sms_service_KRService(ApiSDKJsonClient):
 
     def getKRCustom(self, getKRCustomRequest=None):
         return self.execute('getKRCustom', getKRCustomRequest)
+
+    def getBidByWords(self, getBidByWordsRequest=None):
+        return self.execute('getBidByWords', getBidByWordsRequest)

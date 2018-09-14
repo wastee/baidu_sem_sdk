@@ -1,10 +1,11 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_ToolkitService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'ToolkitService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'ToolkitService',
+                                  token)
 
     def getOperationRecord(self, getOperationRecordRequest=None):
         return self.execute('getOperationRecord', getOperationRecordRequest)

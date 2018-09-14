@@ -1,10 +1,11 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_KeywordService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'KeywordService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'KeywordService',
+                                  token)
 
     def updateWord(self, updateWordRequest=None):
         return self.execute('updateWord', updateWordRequest)

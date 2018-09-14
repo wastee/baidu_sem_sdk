@@ -1,13 +1,15 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_BulkJobService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'BulkJobService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'BulkJobService',
+                                  token)
 
     def getAllChangedObjects(self, getAllChangedObjectsRequest=None):
-        return self.execute('getAllChangedObjects', getAllChangedObjectsRequest)
+        return self.execute('getAllChangedObjects',
+                            getAllChangedObjectsRequest)
 
     def cancelDownload(self, cancelDownloadRequest=None):
         return self.execute('cancelDownload', cancelDownloadRequest)
@@ -29,3 +31,6 @@ class sms_service_BulkJobService(ApiSDKJsonClient):
 
     def getChangedId(self, getChangedIdRequest=None):
         return self.execute('getChangedId', getChangedIdRequest)
+
+    def getUserCache(self, getUserCacheRequest=None):
+        return self.execute('getUserCache', getUserCacheRequest)

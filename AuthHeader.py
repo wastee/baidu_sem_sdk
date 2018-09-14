@@ -1,5 +1,16 @@
+# coding=utf-8
+'''
+    AuthHeader
+'''
+
+
 class AuthHeader():
-    def __init__(self, username=None, password=None, token=None, target=None, accessToken=None):
+    def __init__(self,
+                 username=None,
+                 password=None,
+                 token=None,
+                 target=None,
+                 accessToken=None):
         self.username = username
         self.password = password
         self.token = token

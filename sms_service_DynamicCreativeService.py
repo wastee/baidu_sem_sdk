@@ -1,16 +1,20 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_DynamicCreativeService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'DynamicCreativeService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service',
+                                  'DynamicCreativeService', token)
 
     def getDynCreative(self, getDynCreativeRequest=None):
         return self.execute('getDynCreative', getDynCreativeRequest)
 
-    def getExclusionTypeByCampaignId(self, getExclusionTypeByCampaignIdRequest=None):
-        return self.execute('getExclusionTypeByCampaignId', getExclusionTypeByCampaignIdRequest)
+    def getExclusionTypeByCampaignId(self,
+                                     getExclusionTypeByCampaignIdRequest=None):
+
+        return self.execute('getExclusionTypeByCampaignId',
+                            getExclusionTypeByCampaignIdRequest)
 
     def addDynCreative(self, addDynCreativeRequest=None):
         return self.execute('addDynCreative', addDynCreativeRequest)

@@ -1,10 +1,11 @@
 # coding=utf-8
-from ApiSDKJsonClient import *
+from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_CreativeService(ApiSDKJsonClient):
-    def __init__(self):
-        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'CreativeService')
+    def __init__(self, token):
+        ApiSDKJsonClient.__init__(self, 'sms', 'service', 'CreativeService',
+                                  token)
 
     def updateCreative(self, updateCreativeRequest=None):
         return self.execute('updateCreative', updateCreativeRequest)
@@ -17,5 +18,3 @@ class sms_service_CreativeService(ApiSDKJsonClient):
 
     def getCreative(self, getCreativeRequest=None):
         return self.execute('getCreative', getCreativeRequest)
-
-
