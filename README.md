@@ -44,7 +44,9 @@ or
 pip install -r requirements.txt
 ```
 
-填上api.properties中账户的信息/Add your account information in api.properties
+填上api.properties中账户的信息/Add your account information in baidu-api.properties
+
+> 如果多账户使用，也可以用utils文件夹里的access -> set_token方法来传递用户名、密码、token
 
 代码示例/Reference code：
 ```python
