@@ -85,8 +85,11 @@ class ApiSDKJsonClient():
                 request = {}
             jsonEnv = JsonEnvelop(header, request)
             jsonStr = json.dumps(
-                jsonEnv, default=convert_to_builtin_type, skipkeys=True)
-            print(jsonStr)
+                jsonEnv, default=convert_to_builtin_type, skipkeys=True, ensure_ascii=False).encode('utf8')
+            if type(jsonStr) is bytes:
+                jsonStr_print = jsonStr.decode("utf-8")
+            print(jsonStr_print)
+            print()
             headers = {'content-type': 'application/json;charset=utf-8'}
             r = requests.post(url, data=jsonStr, headers=headers)
 
@@ -146,8 +149,11 @@ def printJsonResponse(res):
 
     if resbody is not None:
         jsonStr = json.dumps(
-            resbody, default=convert_to_builtin_type, skipkeys=True)
-        print(jsonStr)
+            resbody, default=convert_to_builtin_type, skipkeys=True, ensure_ascii=False).encode('utf8')
+        if type(jsonStr) is bytes:
+                jsonStr_print = jsonStr.decode("utf-8")
+        print(jsonStr_print)
+        print()
 
 
 # 转换函数
