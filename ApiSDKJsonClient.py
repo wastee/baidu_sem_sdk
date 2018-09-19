@@ -89,7 +89,6 @@ class ApiSDKJsonClient():
             if type(jsonStr) is bytes:
                 jsonStr_print = jsonStr.decode("utf-8")
             print(jsonStr_print)
-            print()
             headers = {'content-type': 'application/json;charset=utf-8'}
             r = requests.post(url, data=jsonStr, headers=headers)
 
@@ -153,7 +152,6 @@ def printJsonResponse(res):
         if type(jsonStr) is bytes:
                 jsonStr_print = jsonStr.decode("utf-8")
         print(jsonStr_print)
-        print()
 
 
 # 转换函数
