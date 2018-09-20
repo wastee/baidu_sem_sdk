@@ -3,7 +3,7 @@ from .ApiSDKJsonClient import ApiSDKJsonClient
 
 
 class sms_service_CreativeService(ApiSDKJsonClient):
-    def __init__(self, token):
+    def __init__(self, token=None):
         ApiSDKJsonClient.__init__(self, 'sms', 'service', 'CreativeService',
                                   token)
 
