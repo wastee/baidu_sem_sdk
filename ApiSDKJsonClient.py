@@ -51,22 +51,22 @@ class ApiSDKJsonClient():
             tb.print_exc()
 
     def initConfig(self, token):
-        if ApiSDKJsonClient.actionconf is None:
-            cf = configparser.ConfigParser(allow_no_value=True)
+        # if ApiSDKJsonClient.actionconf is None:
+        cf = configparser.ConfigParser(allow_no_value=True)
 
-            if token is None:
-                cf.read(
-                    os.path.abspath(os.path.dirname(__file__)) +
-                    "./baidu-api.properties",
-                    encoding="utf-8")
-            else:
-                cf.read_string(token)
-            ApiSDKJsonClient.urlconf = cf.get("api", "serverUrl")
-            ApiSDKJsonClient.usernameconf = cf.get("api", "username")
-            ApiSDKJsonClient.passwordconf = cf.get("api", "password")
-            ApiSDKJsonClient.tokenconf = cf.get("api", "token")
-            ApiSDKJsonClient.targetconf = cf.get("api", "target")
-            ApiSDKJsonClient.actionconf = cf.get("api", "action")
+        if token is None:
+            cf.read(
+                os.path.abspath(os.path.dirname(__file__)) +
+                "./baidu-api.properties",
+                encoding="utf-8")
+        else:
+            cf.read_string(token)
+        ApiSDKJsonClient.urlconf = cf.get("api", "serverUrl")
+        ApiSDKJsonClient.usernameconf = cf.get("api", "username")
+        ApiSDKJsonClient.passwordconf = cf.get("api", "password")
+        ApiSDKJsonClient.tokenconf = cf.get("api", "token")
+        ApiSDKJsonClient.targetconf = cf.get("api", "target")
+        ApiSDKJsonClient.actionconf = cf.get("api", "action")
 
     def execute(self, method, request):
         try:
